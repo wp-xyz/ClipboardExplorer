@@ -1,0 +1,121 @@
+object AboutForm: TAboutForm
+  Left = 604
+  Height = 372
+  Top = 344
+  Width = 451
+  BorderStyle = bsDialog
+  Caption = 'About Clipboard Explorer'
+  ClientHeight = 372
+  ClientWidth = 451
+  OnCreate = FormCreate
+  LCLVersion = '2.1.0.0'
+  object IconImage: TImage
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 8
+    Height = 48
+    Top = 8
+    Width = 48
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 8
+  end
+  object LblTitle: TLabel
+    AnchorSideLeft.Control = IconImage
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Owner
+    Left = 64
+    Height = 37
+    Top = 2
+    Width = 242
+    BorderSpacing.Left = 8
+    BorderSpacing.Top = 2
+    Caption = 'Clipboard Explorer'
+    Font.Color = 6697728
+    Font.Height = -27
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object LblCopyright: TLabel
+    AnchorSideLeft.Control = LblTitle
+    AnchorSideTop.Control = LblTitle
+    AnchorSideTop.Side = asrBottom
+    Left = 64
+    Height = 15
+    Top = 39
+    Width = 154
+    Caption = '(c) 2015-2019, Werner Pamler'
+    Font.Color = 6697728
+    ParentColor = False
+    ParentFont = False
+  end
+  object LblCredits: TLabel
+    AnchorSideLeft.Control = IconImage
+    AnchorSideTop.Control = IconImage
+    AnchorSideTop.Side = asrBottom
+    Left = 8
+    Height = 15
+    Top = 72
+    Width = 40
+    BorderSpacing.Top = 16
+    Caption = 'Credits:'
+    ParentColor = False
+  end
+  object HtmlPanel: TIpHtmlPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = LblCredits
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 8
+    Height = 241
+    Top = 89
+    Width = 435
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    FixedTypeface = 'Courier New'
+    DefaultTypeFace = 'default'
+    DefaultFontSize = 12
+    FlagErrors = False
+    PrintSettings.MarginLeft = 0.5
+    PrintSettings.MarginTop = 0.5
+    PrintSettings.MarginRight = 0.5
+    PrintSettings.MarginBottom = 0.5
+    PrintSettings.Preview.Left = 640
+    PrintSettings.Preview.Top = 270
+    PrintSettings.Preview.Width = 1920
+    PrintSettings.Preview.Height = 810
+    TabOrder = 0
+    OnHotClick = HtmlPanelHotClick
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 41
+    Top = 331
+    Width = 451
+    Align = alBottom
+    AutoSize = True
+    BevelOuter = bvNone
+    ClientHeight = 41
+    ClientWidth = 451
+    TabOrder = 1
+    object Button1: TButton
+      AnchorSideTop.Control = Panel1
+      AnchorSideTop.Side = asrCenter
+      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Side = asrBottom
+      AnchorSideBottom.Side = asrBottom
+      Left = 368
+      Height = 25
+      Top = 8
+      Width = 75
+      Anchors = [akTop, akRight]
+      BorderSpacing.Right = 8
+      BorderSpacing.Bottom = 8
+      Cancel = True
+      Caption = 'Close'
+      Default = True
+      ModalResult = 11
+      TabOrder = 0
+    end
+  end
+end
