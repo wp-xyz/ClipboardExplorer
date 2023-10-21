@@ -261,6 +261,7 @@ object MainForm: TMainForm
     end
   end
   object ImageList: TImageList
+    Scaled = True
     Left = 408
     Top = 81
     Bitmap = {
