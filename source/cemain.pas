@@ -45,7 +45,6 @@ type
     CoolBar: TCoolBar;
     Image: TImage;
     ImageList: TImageList;
-    HexEditor: TKHexEditor;
     HtmlPanel: TIpHtmlPanel;
     LblImageInfo: TLabel;
     LvFormats: TListView;
@@ -101,6 +100,7 @@ type
     FGraphicMimeTypes: TStrings;
     FSortColumn: Integer;
     FSortDir: TSortDirection;
+    HexEditor: TKHexEditor;
     {$IFDEF USE_RICHMEMO}
     FRichMemo: TRichMemo;
     {$ENDIF}
@@ -582,6 +582,24 @@ begin
 
   Memo.Font.Name := GetFixedFontName;
 
+  HexEditor := TKHexEditor.Create(self);
+  HexEditor.Parent := PgHex;
+  HexEditor.Align := alClient;
+  HexEditor.AddressPrefix := '$';
+  HexEditor.AddressSize := 10;
+  HexEditor.Colors.DigitBkGnd := clBtnFace;
+  HexEditor.Colors.InactiveCaretBkGnd := clHighlight;
+  HexEditor.Colors.InactiveCaretSelBkGnd := clHighlight;
+  HexEditor.Colors.SelBkGnd := clHighlight;
+  HexEditor.Colors.Separators := clSilver;
+  HexEditor.DigitGrouping := 1;
+  HexEditor.Font.CharSet := ANSI_CHARSET;
+  HexEditor.Font.Height := -12;
+  HexEditor.Font.Name := 'Courier New';
+  HexEditor.Font.Pitch := fpFixed;
+  HexEditor.Font.Style := [fsBold];
+  HexEditor.ReadOnly := True;
+  HexEditor.TabOrder := 0;
   HexEditor.Font.Assign(Memo.Font);
   HexEditor.Font.Style := [];
 

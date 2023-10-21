@@ -21,6 +21,7 @@
       <AutoIncrementBuild Value="True"/>
       <MinorVersionNr Value="1"/>
       <RevisionNr Value="1"/>
+      <BuildNr Value="1"/>
       <StringTable CompanyName="W.Pamler" FileDescription="Clipboard Explorer" InternalName="clipbex" LegalCopyright="2015-2017, (c) Werner Pamler" OriginalFilename="clipbex.exe" ProductVersion="0.1.0.0"/>
     </VersionInfo>
     <BuildModes Count="1">
@@ -35,7 +36,7 @@
         <Mode0 Name="default"/>
       </Modes>
     </RunParams>
-    <RequiredPackages Count="4">
+    <RequiredPackages Count="3">
       <Item1>
         <PackageName Value="richmemopackage"/>
       </Item1>
@@ -43,11 +44,8 @@
         <PackageName Value="TurboPowerIPro"/>
       </Item2>
       <Item3>
-        <PackageName Value="KControlsLaz"/>
-      </Item3>
-      <Item4>
         <PackageName Value="LCL"/>
-      </Item4>
+      </Item3>
     </RequiredPackages>
     <Units Count="3">
       <Unit0>
@@ -79,7 +77,8 @@
       <Filename Value="..\bin\$(TargetCPU)-$(TargetOS)\clipbex"/>
     </Target>
     <SearchPaths>
-      <IncludeFiles Value="$(ProjOutDir)"/>
+      <IncludeFiles Value="$(ProjOutDir);third_party\kcontrols"/>
+      <OtherUnitFiles Value="third_party\kcontrols"/>
       <UnitOutputDirectory Value="..\ppu\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
