@@ -11,4 +11,4 @@ ClipboardExplorer is a small tool to inspect the various formats which currently
 # Compilation
 * Lazarus v2.0.12/FPC 3.2.0 or newer (older versions might work as well, not tested))
 * Requires installation of the richmemo package (https://github.com/skalogryz/richmemo)
-* Works on Windows, Linux (gtk2, qt4/5/6), Mac (cocoa)
+* Works on Windows, Linux (qt4/5/6), Mac (cocoa)
