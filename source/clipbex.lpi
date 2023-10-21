@@ -76,11 +76,11 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="bin\$(TargetCPU)-$(TargetOS)\clipbex"/>
+      <Filename Value="..\bin\$(TargetCPU)-$(TargetOS)\clipbex"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <UnitOutputDirectory Value="dcu\$(TargetCPU)-$(TargetOS)"/>
+      <UnitOutputDirectory Value="..\ppu\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>
       <Debugging>
