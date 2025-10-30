@@ -568,12 +568,18 @@ begin
   FGraphicMimeTypes.Add('image/x-bmp');
   FGraphicMimeTypes.Add('image/x-ms-bmp');
   FGraphicMimeTypes.Add('image/x-win-bitmap');
-  FGraphicMimeTypes.Add('image/png');
   FGraphicMimeTypes.Add('image/gif');
+  FGraphicMimeTypes.Add('image/icns');
+  FGraphicMimeTypes.Add('image/ico');
+  FGraphicMimeTypes.Add('image/jfif');
   FGraphicMimeTypes.Add('image/jpeg');
+  FGraphicMimeTypes.Add('image/jpg');
+  FGraphicMimeTypes.Add('image/png');
+  FGraphicMimeTypes.Add('image/tif');
   FGraphicMimeTypes.Add('image/tiff');
   FGraphicMimeTypes.Add('image/x-icon');
   FGraphicMimeTypes.Add('application/x-qt-image');
+  FGraphicMimeTypes.Add('PNG');   // used in Windows 11
 
   PgHTML.Hide;
   PgRichText.Hide;
@@ -595,7 +601,10 @@ begin
   HexEditor.DigitGrouping := 1;
   HexEditor.Font.CharSet := ANSI_CHARSET;
   HexEditor.Font.Height := -12;
-  HexEditor.Font.Name := 'Courier New';
+  if Screen.Fonts.IndexOf('Courier New') > -1 then
+    HexEditor.Font.Name := 'Courier New'
+  else
+    HexEditor.Font.Name := 'Liberation Mono';
   HexEditor.Font.Pitch := fpFixed;
   HexEditor.Font.Style := [fsBold];
   HexEditor.ReadOnly := True;

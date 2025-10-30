@@ -8,7 +8,7 @@ object MainForm: TMainForm
   ClientWidth = 709
   Menu = MainMenu
   ShowHint = True
-  LCLVersion = '3.99.0.0'
+  LCLVersion = '4.99.0.0'
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnDestroy = FormDestroy
