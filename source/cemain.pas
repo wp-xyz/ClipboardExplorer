@@ -563,22 +563,25 @@ procedure TMainForm.FormCreate(Sender: TObject);
 begin
   FClipboardItems := TClipboardItemList.Create;
 
+  // These are the types which the program can display in the "image" tab.
   FGraphicMimeTypes := TStringList.Create;
+  FGraphicMimeTypes.Add('application/x-qt-image');
   FGraphicMimeTypes.Add('image/bmp');
-  FGraphicMimeTypes.Add('image/x-bmp');
-  FGraphicMimeTypes.Add('image/x-ms-bmp');
-  FGraphicMimeTypes.Add('image/x-win-bitmap');
   FGraphicMimeTypes.Add('image/gif');
   FGraphicMimeTypes.Add('image/icns');
   FGraphicMimeTypes.Add('image/ico');
   FGraphicMimeTypes.Add('image/jfif');
   FGraphicMimeTypes.Add('image/jpeg');
   FGraphicMimeTypes.Add('image/jpg');
+//  FGraphicMimeTypes.Add('image/pcx');  // requires writing a TLazReaderPCX
   FGraphicMimeTypes.Add('image/png');
   FGraphicMimeTypes.Add('image/tif');
   FGraphicMimeTypes.Add('image/tiff');
+  FGraphicMimeTypes.Add('image/xpm');
+  FGraphicMimeTypes.Add('image/x-bmp');
   FGraphicMimeTypes.Add('image/x-icon');
-  FGraphicMimeTypes.Add('application/x-qt-image');
+  FGraphicMimeTypes.Add('image/x-ms-bmp');
+  FGraphicMimeTypes.Add('image/x-win-bitmap');
   FGraphicMimeTypes.Add('PNG');   // used in Windows 11
 
   PgHTML.Hide;
